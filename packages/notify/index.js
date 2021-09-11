@@ -4,13 +4,13 @@
  * @Autor: Seven
  * @Date: 2021-07-23 15:33:27
  * @LastEditors: Seven
- * @LastEditTime: 2021-09-09 15:30:20
+ * @LastEditTime: 2021-09-11 17:42:46
  */
 import Vue from "vue";
 import notifyComp from "./Notify.vue";
 const notifyConstructor = Vue.extend(notifyComp);
 let notifyEle = document.createElement("div");
-notifyEle.className = "notifyContainerWrapper";
+notifyEle.className = "notify-container-wrapper";
 
 export default function notify(opts) {
   const instance = new notifyConstructor({

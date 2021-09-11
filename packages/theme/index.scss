@@ -4,10 +4,13 @@
  * @Autor: Seven
  * @Date: 2021-09-09 17:38:51
  * @LastEditors: Seven
- * @LastEditTime: 2021-09-09 18:23:54
+ * @LastEditTime: 2021-09-11 17:59:58
  */
+@import "./src/common/reset.scss";
+@import "./src/common/mixin.scss";
+@import "./src/common/base.scss";
+
 @import "./src/fonts/iconfont.css";
 @import "./src/button/button.scss";
 @import "./src/input/input.scss";
-@import "./src/common/reset.scss";
-@import "./src/common/mixin.scss";
+@import "./src/notify/notify.scss";

@@ -4,7 +4,7 @@
  * @Autor: Seven
  * @Date: 2021-09-09 18:13:52
  * @LastEditors: Seven
- * @LastEditTime: 2021-09-09 19:36:00
+ * @LastEditTime: 2021-09-11 16:42:16
 -->
 <template>
   <div
@@ -20,6 +20,7 @@
       :value="value"
       :name="name"
       :disabled="disabled"
+      :autocomplete="autocomplete"
       @input="handleInput"
     />
     <span class="x-ui-suffix" @click="handlePassword" v-if="showPassword">
@@ -71,6 +72,12 @@ export default {
       type: Boolean,
       default() {
         return false;
+      },
+    },
+    autocomplete: {
+      type: String,
+      default() {
+        return "off";
       },
     },
   },

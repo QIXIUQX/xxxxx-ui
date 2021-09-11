@@ -1,18 +1,29 @@
+<!--
+ * @Description: 
+ * @Version: 2.0
+ * @Autor: Seven
+ * @Date: 2021-09-09 14:26:54
+ * @LastEditors: Seven
+ * @LastEditTime: 2021-09-11 17:59:31
+-->
 <template>
   <!-- 动画 -->
   <transition name="notify-Fade" appear>
     <!-- 整个notify 的容器  主要控制他来显示/隐藏-->
-    <div class="XNotify" v-if="notifyFlag">
+    <div class="x-notify" v-if="notifyFlag">
       <!-- 最左侧的图标类型 支持:error/info/warning/success -->
-      <i :class="[`XNotifyTipIcon-${type} iconfont icon-${type}`]"></i>
+      <i :class="[`x-notify-tip-icon-${type} iconfont icon-${type}`]"></i>
       <!-- 显示的内容 -->
-      <div class="XNotifyMain">
+      <div class="x-notify-main">
         <!-- 标题 -->
-        <div class="XNotifyTitle">{{ title }}</div>
+        <div class="x-notify-title">{{ title }}</div>
         <!-- 信息 -->
-        <div class="XNotifyContent">{{ message }}</div>
+        <div class="x-notify-content">{{ message }}</div>
         <!-- 右上角的关闭按钮 -->
-        <i class="iconfont icon-close XNotifyClose" @click="handleCloseNotify">
+        <i
+          class="iconfont icon-close x-notify-close"
+          @click="handleCloseNotify"
+        >
         </i>
       </div>
     </div>
@@ -48,100 +59,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.XNotify {
-  margin: 5px;
-  border-radius: 5px;
-  position: relative;
-  width: 330px;
-  padding: 15px;
-  top: 0px;
-  z-index: 9999;
-  background-color: #fff;
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 10%);
-  display: flex;
-  .XNotifyTipIcon-info {
-    margin: 5px 10px 0 0;
-    font-size: 20px;
-    color: #00b0ff;
-  }
-  .XNotifyTipIcon-error {
-    margin: 5px 10px 0 0;
-    font-size: 20px;
-    color: #f56c6c;
-  }
-  .XNotifyTipIcon-success {
-    margin: 5px 10px 0 0;
-    font-size: 20px;
-    color: #67c23a;
-  }
-  .XNotifyTipIcon-warning {
-    margin: 5px 10px 0 0;
-    font-size: 20px;
-    color: #e6a23c;
-  }
-
-  .XNotifyMain {
-    .XNotifyTitle {
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 1.2;
-    }
-    .XNotifyContent {
-      margin: 6px 0 0 0;
-      font-size: 14px;
-      line-height: 1.2;
-    }
-    .XNotifyClose {
-      position: absolute;
-      right: 10px;
-      top: 5px;
-      cursor: pointer;
-      padding: 3px;
-      &:hover {
-        color: #00b0ff;
-      }
-    }
-  }
-}
-.notifyContainerWrapper {
-  padding: 2px;
-  overflow: hidden;
-  //   display: flex;
-  //   flex-direction: column;
-  background-color: transparent;
-  position: absolute;
-  transition: all 0.3s linear;
-  top: 16px;
-  right: 20px;
-  //   z-index: -1;
-
-  border-radius: 5px;
-}
-.notify-Fade-enter-active {
-  animation: notifyFadeEnter 0.3s ease-in;
-}
-.notify-Fade-leave-active {
-  animation: identifierLeave 0.3s ease-out;
-}
-@keyframes notifyFadeEnter {
-  0% {
-    right: -100%;
-    opacity: 0;
-  }
-  100% {
-    right: 0;
-    opacity: 1;
-  }
-}
-@keyframes identifierLeave {
-  0% {
-    // top: 0;
-    opacity: 1;
-  }
-  100% {
-    // top: -300px;
-    opacity: 0;
-  }
-}
-</style>
+<style lang="scss"></style>

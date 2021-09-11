@@ -4,36 +4,28 @@
  * @Autor: Seven
  * @Date: 2021-09-09 14:50:36
  * @LastEditors: Seven
- * @LastEditTime: 2021-09-09 19:43:44
+ * @LastEditTime: 2021-09-11 17:57:34
 -->
 <template>
   <div id="app">
-    <XButton type="default" style="margin-left:10px" @click="handleBtnClick"
-      >默认 按钮</XButton
-    >
-    <XButton type="primary" style="margin-left:10px">主要 按钮</XButton>
-    <XButton type="success" style="margin-left:10px">成功 按钮</XButton>
-    <XButton type="info" style="margin-left:10px">信息 按钮</XButton>
-    <XButton type="warning" style="margin-left:10px">警告 按钮</XButton>
-    <XButton type="error" style="margin-left:10px">错误 按钮</XButton>
-    <XButton type="error" style="margin-left:10px" disabled @click="handleClick"
-      >禁用 按钮</XButton
-    >
-    <div style="width:300px">
-      <XInput type="text" placeholder="测试数据" v-model="input"></XInput>
+    <SideBar></SideBar>
+    <div class="wrap">
+      <router-view></router-view>
     </div>
   </div>
 </template>
 <script>
+const SideBar = () => import("./views/side-bar/SideBar.vue");
+
 export default {
   data() {
-    return {
-      input: "",
-    };
+    return {};
+  },
+  components: {
+    SideBar,
   },
   methods: {
     handleBtnClick() {
-      console.log(this);
       this.$notify({
         title: "成功提示框",
         message: `成功提示框,试试点右上角的关闭!`,
@@ -70,5 +62,10 @@ export default {
 #app {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  .wrap {
+    padding: 50px;
+    width: 100%;
+  }
 }
 </style>

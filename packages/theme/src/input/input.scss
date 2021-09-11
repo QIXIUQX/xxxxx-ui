@@ -1,8 +1,7 @@
 .x-input {
     width: 100%;
-    height: 100%;
-    background-color: red;
-    border: 1px solid #c0c4cc;
+    height: max-content;
+    border-radius: 5px;
 
     .x-input-inner {
         padding: 0 10px;
@@ -10,7 +9,12 @@
         height: 40px;
         outline: none;
         border: none;
+        border: 1px solid #c0c4cc;
+        transition: all 0.3s ease;
 
+        &:focus {
+            border: 1px solid #70b6ff;
+        }
     }
 
     input[type='password']::-ms-reveal {
