@@ -12,6 +12,9 @@ import router from "./router";
 import store from "./store";
 
 import XUI from "../packages/index";
+
+// import XUI from "xxxxx-ui"; import
+// "xxxxx-ui/dist/xxxxx-ui.css"; Vue.use(XUI);
 Vue.config.productionTip = false;
 Vue.use(XUI);
 

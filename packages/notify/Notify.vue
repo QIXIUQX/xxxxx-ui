@@ -4,7 +4,7 @@
  * @Autor: Seven
  * @Date: 2021-09-09 14:26:54
  * @LastEditors: Seven
- * @LastEditTime: 2021-09-11 17:59:31
+ * @LastEditTime: 2021-09-13 15:15:57
 -->
 <template>
   <!-- 动画 -->
@@ -59,4 +59,112 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.x-notify {
+  margin: 5px 5px 10px 5px;
+  border-radius: 5px;
+  position: relative;
+  width: 330px;
+  padding: 15px;
+  top: 0px;
+  z-index: 9999;
+  background-color: #fff;
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 15%);
+  display: flex;
+
+  .x-notify-tip-icon-info {
+    margin: 5px 10px 0 0;
+    font-size: 20px;
+    color: #00b0ff;
+  }
+
+  .x-notify-tip-icon-error {
+    margin: 5px 10px 0 0;
+    font-size: 20px;
+    color: #f56c6c;
+  }
+
+  .x-notify-tip-icon-success {
+    margin: 5px 10px 0 0;
+    font-size: 20px;
+    color: #67c23a;
+  }
+
+  .x-notify-tip-icon-warning {
+    margin: 5px 10px 0 0;
+    font-size: 20px;
+    color: #e6a23c;
+  }
+
+  .x-notify-main {
+    .x-notify-title {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .x-notify-content {
+      margin: 6px 0 0 0;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+
+    .x-notify-close {
+      position: absolute;
+      right: 10px;
+      top: 5px;
+      cursor: pointer;
+      padding: 3px;
+
+      &:hover {
+        color: #00b0ff;
+      }
+    }
+  }
+}
+
+.notify-container-wrapper {
+  padding: 2px;
+  overflow: hidden;
+  //   display: flex;
+  //   flex-direction: column;
+  background-color: transparent;
+  position: fixed;
+  transition: all 0.3s linear;
+  top: 16px;
+  right: 20px;
+  //   z-index: -1;
+
+  border-radius: 5px;
+}
+
+.notify-Fade-enter-active {
+  animation: notifyFadeEnter 0.3s ease-in;
+}
+
+.notify-Fade-leave-active {
+  animation: identifierLeave 0.3s ease-out;
+}
+
+@keyframes notifyFadeEnter {
+  0% {
+    right: -100%;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes identifierLeave {
+  0% {
+    // right: 0;
+    opacity: 1;
+  }
+  100% {
+    // right: -100%;
+    opacity: 0;
+  }
+}
+</style>

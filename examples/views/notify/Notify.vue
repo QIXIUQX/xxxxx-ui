@@ -4,7 +4,7 @@
  * @Autor: Seven
  * @Date: 2021-09-11 16:53:08
  * @LastEditors: Seven
- * @LastEditTime: 2021-09-11 17:56:11
+ * @LastEditTime: 2021-09-13 15:08:44
 -->
 <template>
   <div class="notify">
@@ -12,24 +12,30 @@
     <XButton @click="handleNotifyInfo">点我显示 消息提示框</XButton>
     <XButton @click="handleNotifyWarning">点我显示 警告提示框</XButton>
     <XButton @click="handleNotifyError">点我显示 错误提示框</XButton>
-    <code class="code-show">
+    <CodeArea>
       <pre>
 
-        this.$notify({
-            title: "错误提示框",
-            message:`消息提示框,我不会自动消失`,
-            duration: 0, 
-            type: "error", 
+    this.$notify({
+            title: "成功提示框",
+            message: `成功提示框,试试点右上角的关闭!`,
+            duration: 0,
+            type: "success",
         });
-    </pre
+    },
+     </pre
       >
-    </code>
+    </CodeArea>
   </div>
 </template>
 
 <script>
+const CodeArea = () => import("../../components/code-area/CodeArea.vue");
+
 export default {
   name: "",
+  components: {
+    CodeArea,
+  },
   methods: {
     handleNotifySuccess() {
       this.$notify({
@@ -68,15 +74,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.code-show {
-  //   background-color: red;
-  width: 1200px;
-  pre {
-    width: 1200px;
-
-    background-color: #2b2b2b;
-    color: #bababa;
-    font-size: 20px;
-  }
+.notify {
+  height: 1000px;
 }
 </style>
