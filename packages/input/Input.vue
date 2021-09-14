@@ -4,7 +4,7 @@
  * @Autor: Seven
  * @Date: 2021-09-09 18:13:52
  * @LastEditors: Seven
- * @LastEditTime: 2021-09-11 16:42:16
+ * @LastEditTime: 2021-09-14 10:08:54
 -->
 <template>
   <div
@@ -57,12 +57,6 @@ export default {
       },
     },
     disabled: {
-      type: Boolean,
-      default() {
-        return false;
-      },
-    },
-    clearable: {
       type: Boolean,
       default() {
         return false;
