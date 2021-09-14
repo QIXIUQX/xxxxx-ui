@@ -4,7 +4,7 @@
  * @Autor: Seven
  * @Date: 2021-09-11 16:29:44
  * @LastEditors: Seven
- * @LastEditTime: 2021-09-14 18:02:21
+ * @LastEditTime: 2021-09-15 02:17:15
 -->
 <template>
   <div class="input">
@@ -23,7 +23,34 @@
       showPassword
     ></XInput>
 
-    <pre>
+    <pre v-text="str"></pre>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "",
+  data() {
+    return {
+      input: "",
+      str: `
+    <XInput
+      type="text"
+      placeholder="测试数据"
+      v-model="input"
+      @blur="handleblue"
+      @focus="handlefocus"
+      @change="handleChange"
+    ></XInput>
+    <XInput
+      type="password"
+      placeholder="测试数据"
+      v-model="input"
+      showPassword
+    >
+    </XInput>
+
+
     type String text 文本框类型
     placeholder String 提示文字
     value String "" 默认值  
@@ -37,16 +64,7 @@
     focus	在 Input 获得焦点时触发	(event: Event)
     change	仅在输入框失去焦点或用户按下回车时触发	(value: string | number)
     input	在 Input 值改变时触发	(value: string | number)
-    </pre>
-  </div>
-</template>
-
-<script>
-export default {
-  name: "",
-  data() {
-    return {
-      input: "",
+      `,
     };
   },
   methods: {

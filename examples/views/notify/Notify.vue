@@ -4,7 +4,7 @@
  * @Autor: Seven
  * @Date: 2021-09-11 16:53:08
  * @LastEditors: Seven
- * @LastEditTime: 2021-09-13 15:08:44
+ * @LastEditTime: 2021-09-15 02:18:28
 -->
 <template>
   <div class="notify">
@@ -13,17 +13,7 @@
     <XButton @click="handleNotifyWarning">点我显示 警告提示框</XButton>
     <XButton @click="handleNotifyError">点我显示 错误提示框</XButton>
     <CodeArea>
-      <pre>
-
-    this.$notify({
-            title: "成功提示框",
-            message: `成功提示框,试试点右上角的关闭!`,
-            duration: 0,
-            type: "success",
-        });
-    },
-     </pre
-      >
+      <pre v-text="str"></pre>
     </CodeArea>
   </div>
 </template>
@@ -35,6 +25,19 @@ export default {
   name: "",
   components: {
     CodeArea,
+  },
+  data() {
+    return {
+      str: `
+        this.$notify({
+            title: "成功提示框",
+            message: "成功提示框,试试点右上角的关闭!",
+            duration: 0,
+            type: "success",
+        });
+    },
+      `,
+    };
   },
   methods: {
     handleNotifySuccess() {

@@ -4,7 +4,7 @@
  * @Autor: Seven
  * @Date: 2021-09-15 00:35:55
  * @LastEditors: Seven
- * @LastEditTime: 2021-09-15 01:02:36
+ * @LastEditTime: 2021-09-15 02:06:40
 -->
 <template>
   <label class="x-switch" @click="handleSwitchClick">
@@ -63,15 +63,16 @@ export default {
   align-items: center;
   width: 40px;
   height: 20px;
-  background-color: pink;
   border-radius: 10px;
   overflow: hidden;
+  cursor: pointer;
   .x-switch-core {
     position: relative;
     width: 100%;
     height: 100%;
     background-color: #999;
     box-sizing: border-box;
+    transition: all 0.3s ease;
     .x-switch-button {
       position: absolute;
       left: 1px;
@@ -85,6 +86,7 @@ export default {
   }
   .is-check {
     background-color: #379aff;
+    transition: all 0.3s ease;
     .x-switch-button {
       transform: translateX(20px);
     }

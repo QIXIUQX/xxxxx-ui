@@ -4,7 +4,7 @@
  * @Autor: Seven
  * @Date: 2021-09-11 16:15:48
  * @LastEditors: Seven
- * @LastEditTime: 2021-09-15 00:38:47
+ * @LastEditTime: 2021-09-15 02:33:22
 -->
 <template>
   <div class="sidebar">
@@ -48,6 +48,10 @@ export default {
         {
           path: "/switch",
           title: "switch 滑块",
+        },
+        {
+          path: "/tag",
+          title: "tag 标签",
         },
       ],
     };

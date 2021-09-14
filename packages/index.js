@@ -4,7 +4,7 @@
  * @Autor: Seven
  * @Date: 2021-09-09 15:04:53
  * @LastEditors: Seven
- * @LastEditTime: 2021-09-15 00:36:47
+ * @LastEditTime: 2021-09-15 02:32:45
  */
 import "./theme/index.scss";
 
@@ -15,6 +15,7 @@ import XCollapse from "./collapse/Collapse.vue";
 import XCollapseItem from "./collapse/CollapseItem.vue";
 import XStoreyTitle from "./storey-title/StoreyTitle.vue";
 import XSwitch from "./switch/Switch.vue";
+import XTag from "./tag/Tag.vue";
 
 const components = [
   XButton,
@@ -23,6 +24,7 @@ const components = [
   XCollapseItem,
   XStoreyTitle,
   XSwitch,
+  XTag,
 ];
 
 const install = function(Vue) {
