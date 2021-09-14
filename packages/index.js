@@ -4,7 +4,7 @@
  * @Autor: Seven
  * @Date: 2021-09-09 15:04:53
  * @LastEditors: Seven
- * @LastEditTime: 2021-09-11 16:19:54
+ * @LastEditTime: 2021-09-15 00:36:47
  */
 import "./theme/index.scss";
 
@@ -14,8 +14,16 @@ import XInput from "./input/Input.vue";
 import XCollapse from "./collapse/Collapse.vue";
 import XCollapseItem from "./collapse/CollapseItem.vue";
 import XStoreyTitle from "./storey-title/StoreyTitle.vue";
+import XSwitch from "./switch/Switch.vue";
 
-const components = [XButton, XInput, XCollapse, XCollapseItem, XStoreyTitle];
+const components = [
+  XButton,
+  XInput,
+  XCollapse,
+  XCollapseItem,
+  XStoreyTitle,
+  XSwitch,
+];
 
 const install = function(Vue) {
   Vue.prototype.$notify = notify;

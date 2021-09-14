@@ -4,7 +4,7 @@
  * @Autor: Seven
  * @Date: 2021-09-11 16:15:48
  * @LastEditors: Seven
- * @LastEditTime: 2021-09-11 16:54:19
+ * @LastEditTime: 2021-09-15 00:38:47
 -->
 <template>
   <div class="sidebar">
@@ -43,6 +43,11 @@ export default {
         {
           path: "/notify",
           title: "Notify 通知",
+        },
+
+        {
+          path: "/switch",
+          title: "switch 滑块",
         },
       ],
     };
