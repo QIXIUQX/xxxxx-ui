@@ -4,7 +4,7 @@
  * @Autor: Seven
  * @Date: 2021-09-11 16:27:25
  * @LastEditors: Seven
- * @LastEditTime: 2021-09-11 16:33:15
+ * @LastEditTime: 2021-09-14 13:58:02
 -->
 <template>
   <div class="button">
@@ -15,6 +15,14 @@
     <XButton type="warning" style="margin-left:10px">警告 按钮</XButton>
     <XButton type="error" style="margin-left:10px">错误 按钮</XButton>
     <XButton type="error" style="margin-left:10px" disabled>禁用 按钮</XButton>
+
+    <pre>
+      type String primary 按钮类型 default primary success info warning error
+
+      disabled Boolean false 是否禁用
+     
+     click 事件
+    </pre>
   </div>
 </template>
 

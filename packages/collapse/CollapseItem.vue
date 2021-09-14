@@ -4,7 +4,7 @@
  * @Autor: Seven
  * @Date: 2021-09-08 12:48:40
  * @LastEditors: Seven
- * @LastEditTime: 2021-09-11 16:52:27
+ * @LastEditTime: 2021-09-14 14:52:00
 -->
 <template>
   <div class="x-ui-collapse-item">
@@ -80,7 +80,6 @@ export default {
     }
   }
   .x-ui-collapse-item-wrap {
-    will-change: height;
     background-color: #fff;
     overflow: hidden;
     .item-content {

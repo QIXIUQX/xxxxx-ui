@@ -4,7 +4,7 @@
  * @Autor: Seven
  * @Date: 2021-09-09 18:13:52
  * @LastEditors: Seven
- * @LastEditTime: 2021-09-14 10:08:54
+ * @LastEditTime: 2021-09-14 18:03:23
 -->
 <template>
   <div
@@ -22,6 +22,10 @@
       :disabled="disabled"
       :autocomplete="autocomplete"
       @input="handleInput"
+      @blur="handleBlur"
+      @focus="handleFocus"
+      @keyup.enter="handleKeyUpEnter"
+      ref="inner"
     />
     <span class="x-ui-suffix" @click="handlePassword" v-if="showPassword">
       <i class="iconfont icon-eye-open" v-if="passwordVisible"></i>
@@ -91,6 +95,18 @@ export default {
     },
     handlePassword() {
       this.passwordVisible = !this.passwordVisible;
+    },
+    handleBlur() {
+      this.$emit("blur");
+      this.$emit("change");
+    },
+    handleFocus() {
+      this.$emit("focus");
+      this.$emit("change");
+    },
+    handleKeyUpEnter() {
+      // this.$emit("change");
+      this.$refs.inner.blur();
     },
   },
 };
