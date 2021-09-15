@@ -4,7 +4,7 @@
  * @Autor: Seven
  * @Date: 2021-09-09 15:04:53
  * @LastEditors: Seven
- * @LastEditTime: 2021-09-15 02:32:45
+ * @LastEditTime: 2021-09-15 17:36:00
  */
 import "./theme/index.scss";
 
@@ -16,6 +16,7 @@ import XCollapseItem from "./collapse/CollapseItem.vue";
 import XStoreyTitle from "./storey-title/StoreyTitle.vue";
 import XSwitch from "./switch/Switch.vue";
 import XTag from "./tag/Tag.vue";
+import Divider from "./divider/Divider.vue";
 
 const components = [
   XButton,
@@ -25,6 +26,7 @@ const components = [
   XStoreyTitle,
   XSwitch,
   XTag,
+  Divider,
 ];
 
 const install = function(Vue) {

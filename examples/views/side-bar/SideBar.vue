@@ -4,7 +4,7 @@
  * @Autor: Seven
  * @Date: 2021-09-11 16:15:48
  * @LastEditors: Seven
- * @LastEditTime: 2021-09-15 13:29:31
+ * @LastEditTime: 2021-09-15 17:36:37
 -->
 <template>
   <div class="sidebar">
@@ -56,6 +56,10 @@ export default {
         {
           path: "/storeytitle",
           title: "storeytitle 标题",
+        },
+        {
+          path: "/divider",
+          title: "divider 分割线",
         },
       ],
     };

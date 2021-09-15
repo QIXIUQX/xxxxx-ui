@@ -4,7 +4,7 @@
  * @Autor: Seven
  * @Date: 2021-09-09 14:50:36
  * @LastEditors: Seven
- * @LastEditTime: 2021-09-15 13:29:18
+ * @LastEditTime: 2021-09-15 17:37:21
  */
 import Vue from "vue";
 import VueRouter from "vue-router";
@@ -16,6 +16,7 @@ const Notify = () => import("../views/notify/Notify.vue");
 const Switch = () => import("../views/switch/Switch.vue");
 const Tag = () => import("../views/tag/Tag.vue");
 const StoreyTitle = () => import("../views/storey-title/StoreyTitle.vue");
+const Divider = () => import("../views/divider/Divider.vue");
 
 Vue.use(VueRouter);
 
@@ -56,6 +57,10 @@ const routes = [
   {
     path: "/storeytitle",
     component: StoreyTitle,
+  },
+  {
+    path: "/divider",
+    component: Divider,
   },
 ];
 

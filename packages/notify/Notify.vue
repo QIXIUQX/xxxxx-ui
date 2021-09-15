@@ -4,7 +4,7 @@
  * @Autor: Seven
  * @Date: 2021-09-09 14:26:54
  * @LastEditors: Seven
- * @LastEditTime: 2021-09-13 15:15:57
+ * @LastEditTime: 2021-09-15 14:45:11
 -->
 <template>
   <!-- 动画 -->
@@ -133,7 +133,7 @@ export default {
   transition: all 0.3s linear;
   top: 16px;
   right: 20px;
-  //   z-index: -1;
+  z-index: 9999;
 
   border-radius: 5px;
 }

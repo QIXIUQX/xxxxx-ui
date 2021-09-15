@@ -4,7 +4,7 @@
  * @Autor: Seven
  * @Date: 2021-09-15 00:37:22
  * @LastEditors: Seven
- * @LastEditTime: 2021-09-15 13:43:29
+ * @LastEditTime: 2021-09-15 13:47:53
 -->
 <template>
   <div class="">
@@ -44,8 +44,8 @@ export default {
     };
   },
   methods: {
-    handleChange() {
-      console.log("handleChange");
+    handleChange(newValue) {
+      console.log(("newValue", newValue));
     },
   },
 };
