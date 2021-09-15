@@ -4,7 +4,7 @@
  * @Autor: Seven
  * @Date: 2021-09-07 17:07:11
  * @LastEditors: Seven
- * @LastEditTime: 2021-09-11 16:22:03
+ * @LastEditTime: 2021-09-15 13:27:52
 -->
 <template>
   <header class="storey-title">
@@ -23,6 +23,7 @@ export default {
   padding-left: 10px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: 50px;
   font-size: 20px;
