@@ -4,7 +4,7 @@
  * @Autor: Seven
  * @Date: 2021-09-15 00:35:55
  * @LastEditors: Seven
- * @LastEditTime: 2021-09-15 02:06:40
+ * @LastEditTime: 2021-09-15 13:42:52
 -->
 <template>
   <label class="x-switch" @click="handleSwitchClick">
@@ -40,6 +40,7 @@ export default {
   methods: {
     handleSwitchClick() {
       this.$emit("input", !this.value);
+      this.$emit("change");
       this.$nextTick(() => {
         this.setColor();
       });

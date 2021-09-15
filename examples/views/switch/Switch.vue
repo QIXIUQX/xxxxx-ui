@@ -4,11 +4,11 @@
  * @Autor: Seven
  * @Date: 2021-09-15 00:37:22
  * @LastEditors: Seven
- * @LastEditTime: 2021-09-15 02:20:16
+ * @LastEditTime: 2021-09-15 13:43:29
 -->
 <template>
   <div class="">
-    <XSwitch v-model="isCheck"></XSwitch>
+    <XSwitch v-model="isCheck" @change="handleChange"></XSwitch>
     <XSwitch
       v-model="isCheck"
       activeColor="green"
@@ -39,8 +39,14 @@ export default {
       value:  Boolean false; 默认值，v-model绑定
       activeColor: String ""; 活动颜色  默认值 153, 153, 153
       inActiveColor: String,""; 非活动颜色
+      change 状态发生改变时候触发
       `,
     };
+  },
+  methods: {
+    handleChange() {
+      console.log("handleChange");
+    },
   },
 };
 </script>
