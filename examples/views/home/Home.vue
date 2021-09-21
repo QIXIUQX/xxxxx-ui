@@ -4,7 +4,7 @@
  * @Autor: Seven
  * @Date: 2021-09-11 18:09:25
  * @LastEditors: Seven
- * @LastEditTime: 2021-09-11 18:24:35
+ * @LastEditTime: 2021-09-19 22:52:36
 -->
 <template>
   <div class="home">
@@ -16,6 +16,9 @@
 <script>
 export default {
   name: "",
+  methods: {
+    handleClick() {},
+  },
 };
 </script>
 

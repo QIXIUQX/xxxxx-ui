@@ -3,8 +3,8 @@
  * @Version: 2.0
  * @Autor: Seven
  * @Date: 2021-09-08 12:48:40
- * @LastEditors: Seven
- * @LastEditTime: 2021-09-14 14:52:00
+ * @LastEditors: xx
+ * @LastEditTime: 2021-09-21 19:16:17
 -->
 <template>
   <div class="x-ui-collapse-item">
@@ -19,12 +19,13 @@
         }"
       ></i>
     </div>
-
-    <div class="x-ui-collapse-item-wrap" v-show="hasShow">
-      <div class="item-content">
-        <slot>content</slot>
+    <transition @before-enter="beforeEnter" @enter="enter" @leave="leave">
+      <div class="x-ui-collapse-item-wrap" v-show="hasShow">
+        <div class="item-content">
+          <slot>content</slot>
+        </div>
       </div>
-    </div>
+    </transition>
   </div>
 </template>
 
@@ -49,9 +50,19 @@ export default {
   },
   methods: {
     handleCollapseItemClick() {
-      console.log(this.name);
-      console.log(this.$slots);
       this.collapse.$emit("itemChange", this.name);
+    },
+    beforeEnter(el) {
+      el.style.height = 0;
+    },
+    enter(el) {
+      el.offsetTop;
+      el.style.height = el.scrollHeight + "px";
+      el.style.transition = `all ease .3s`;
+    },
+    leave(el) {
+      el.style.height = 0;
+      el.style.transition = `all ease .3s`;
     },
   },
 };
