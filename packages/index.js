@@ -3,8 +3,8 @@
  * @Version: 2.0
  * @Autor: Seven
  * @Date: 2021-09-09 15:04:53
- * @LastEditors: Seven
- * @LastEditTime: 2021-09-19 22:52:25
+ * @LastEditors: xx
+ * @LastEditTime: 2021-09-21 21:09:48
  */
 import "./theme/index.scss";
 
@@ -17,6 +17,7 @@ import XStoreyTitle from "./storey-title/StoreyTitle.vue";
 import XSwitch from "./switch/Switch.vue";
 import XTag from "./tag/Tag.vue";
 import XDivider from "./divider/Divider.vue";
+import XDialog from "./dialog/Dialog.vue";
 
 const components = [
   XButton,
@@ -27,6 +28,7 @@ const components = [
   XSwitch,
   XTag,
   XDivider,
+  XDialog,
 ];
 
 const install = function(Vue) {

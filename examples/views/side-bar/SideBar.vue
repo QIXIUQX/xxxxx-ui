@@ -3,8 +3,8 @@
  * @Version: 2.0
  * @Autor: Seven
  * @Date: 2021-09-11 16:15:48
- * @LastEditors: Seven
- * @LastEditTime: 2021-09-15 17:36:37
+ * @LastEditors: xx
+ * @LastEditTime: 2021-09-21 21:12:49
 -->
 <template>
   <div class="sidebar">
@@ -60,6 +60,10 @@ export default {
         {
           path: "/divider",
           title: "divider 分割线",
+        },
+        {
+          path: "/dialog",
+          title: "dialog 对话框",
         },
       ],
     };
