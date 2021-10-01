@@ -4,7 +4,7 @@
  * @Autor: Seven
  * @Date: 2021-09-09 14:50:36
  * @LastEditors: xx
- * @LastEditTime: 2021-09-21 21:13:24
+ * @LastEditTime: 2021-09-26 19:49:53
  */
 import Vue from "vue";
 import VueRouter from "vue-router";
@@ -18,6 +18,7 @@ const Tag = () => import("../views/tag/Tag.vue");
 const StoreyTitle = () => import("../views/storey-title/StoreyTitle.vue");
 const Divider = () => import("../views/divider/Divider.vue");
 const dialog = () => import("../views/dialog/dialog.vue");
+const Slide = () => import("../views/slide/Slide.vue");
 
 Vue.use(VueRouter);
 
@@ -66,6 +67,10 @@ const routes = [
   {
     path: "/dialog",
     component: dialog,
+  },
+  {
+    path: "/slide",
+    component: Slide,
   },
 ];
 

@@ -4,7 +4,7 @@
  * @Autor: Seven
  * @Date: 2021-09-09 15:04:53
  * @LastEditors: xx
- * @LastEditTime: 2021-09-21 21:09:48
+ * @LastEditTime: 2021-09-25 00:51:56
  */
 import "./theme/index.scss";
 
@@ -18,6 +18,8 @@ import XSwitch from "./switch/Switch.vue";
 import XTag from "./tag/Tag.vue";
 import XDivider from "./divider/Divider.vue";
 import XDialog from "./dialog/Dialog.vue";
+import XSlide from "./slide/Slide.vue";
+import XSlideItem from "./slide/SlideItem.vue";
 
 const components = [
   XButton,
@@ -29,6 +31,8 @@ const components = [
   XTag,
   XDivider,
   XDialog,
+  XSlide,
+  XSlideItem,
 ];
 
 const install = function(Vue) {

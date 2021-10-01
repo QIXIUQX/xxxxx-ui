@@ -4,7 +4,7 @@
  * @Autor: Seven
  * @Date: 2021-09-11 16:15:48
  * @LastEditors: xx
- * @LastEditTime: 2021-09-21 21:12:49
+ * @LastEditTime: 2021-09-25 00:02:42
 -->
 <template>
   <div class="sidebar">
@@ -64,6 +64,10 @@ export default {
         {
           path: "/dialog",
           title: "dialog 对话框",
+        },
+        {
+          path: "/slide",
+          title: "slide 轮播图",
         },
       ],
     };

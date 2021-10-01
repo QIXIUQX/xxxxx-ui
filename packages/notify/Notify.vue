@@ -3,8 +3,8 @@
  * @Version: 2.0
  * @Autor: Seven
  * @Date: 2021-09-09 14:26:54
- * @LastEditors: Seven
- * @LastEditTime: 2021-09-15 14:45:11
+ * @LastEditors: xx
+ * @LastEditTime: 2021-09-29 00:25:59
 -->
 <template>
   <!-- 动画 -->
@@ -61,6 +61,7 @@ export default {
 
 <style lang="scss">
 .x-notify {
+  display: flex;
   margin: 5px 5px 10px 5px;
   border-radius: 5px;
   position: relative;
@@ -70,8 +71,6 @@ export default {
   z-index: 9999;
   background-color: #fff;
   box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 15%);
-  display: flex;
-
   .x-notify-tip-icon-info {
     margin: 5px 10px 0 0;
     font-size: 20px;

@@ -4,7 +4,7 @@
  * @Autor: xx
  * @Date: 2021-09-21 21:10:16
  * @LastEditors: xx
- * @LastEditTime: 2021-09-21 21:37:43
+ * @LastEditTime: 2021-10-01 14:57:23
 -->
 <template>
   <div class="dialog">
@@ -12,7 +12,12 @@
       点我显示
     </button>
 
-    <XDialog :title="dialogTitle" :visible.sync="visible">
+    <XDialog
+      :title="dialogTitle"
+      :visible.sync="visible"
+      @open="open"
+      @close="close"
+    >
       <div slot="dialogBody" class="dialogBody">
         <input
           type="text"
@@ -95,6 +100,12 @@ export default {
     },
     handleclick() {
       this.visible = !this.visible;
+    },
+    open() {
+      console.log("openopenopenopenopenopenopenopenopen");
+    },
+    close() {
+      console.log("closecloseclosecloseclosecloseclosecloseclose");
     },
   },
 };
