@@ -4,7 +4,7 @@
  * @Autor: xx
  * @Date: 2021-09-25 00:02:17
  * @LastEditors: xx
- * @LastEditTime: 2021-10-01 18:55:08
+ * @LastEditTime: 2021-10-03 01:27:04
 -->
 <template>
   <div class="slide">
@@ -63,6 +63,6 @@ export default {
 <style lang="scss" scoped>
 .slide {
   height: 500px;
-  width: 100%;
+  width: 1200px;
 }
 </style>

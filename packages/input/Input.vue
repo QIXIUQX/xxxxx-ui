@@ -3,8 +3,8 @@
  * @Version: 2.0
  * @Autor: Seven
  * @Date: 2021-09-09 18:13:52
- * @LastEditors: Seven
- * @LastEditTime: 2021-09-14 18:03:23
+ * @LastEditors: xx
+ * @LastEditTime: 2021-10-03 02:15:16
 -->
 <template>
   <div
@@ -14,6 +14,7 @@
     }"
   >
     <input
+      v-if="type != 'textarea'"
       :class="['x-input-inner ', { 'is-disabled': disabled }]"
       :type="showPassword ? (passwordVisible ? 'text' : 'password') : type"
       :placeholder="placeholder"
@@ -27,7 +28,16 @@
       @keyup.enter="handleKeyUpEnter"
       ref="inner"
     />
-    <span class="x-ui-suffix" @click="handlePassword" v-if="showPassword">
+    <textarea
+      v-else
+      class="x-textarea"
+      :style="`resize: ${resize};`"
+    ></textarea>
+    <span
+      class="x-ui-suffix"
+      @click="handlePassword"
+      v-if="showPassword && type != 'textarea'"
+    >
       <i class="iconfont icon-eye-open" v-if="passwordVisible"></i>
       <i class="iconfont icon-eye-closed" v-if="!passwordVisible"></i>
     </span>
@@ -76,6 +86,12 @@ export default {
       type: String,
       default() {
         return "off";
+      },
+    },
+    resize: {
+      type: String,
+      default() {
+        return "both";
       },
     },
   },
