@@ -3,8 +3,8 @@
  * @Version: 2.0
  * @Autor: Seven
  * @Date: 2021-09-09 14:52:26
- * @LastEditors: Seven
- * @LastEditTime: 2021-09-09 14:52:32
+ * @LastEditors: xx
+ * @LastEditTime: 2021-10-03 02:19:27
  */
 const path = require("path");
 module.exports = {
@@ -28,4 +28,6 @@ module.exports = {
         return options;
       });
   },
+
+  publicPath: process.env.NODE_ENV === "production" ? "/xxxxx/" : "/",
 };
