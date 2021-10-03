@@ -4,7 +4,7 @@
  * @Autor: xx
  * @Date: 2021-09-21 21:10:16
  * @LastEditors: xx
- * @LastEditTime: 2021-10-01 14:57:23
+ * @LastEditTime: 2021-10-03 16:11:21
 -->
 <template>
   <div class="dialog">
@@ -44,7 +44,7 @@ export default {
   name: "",
   data() {
     return {
-      dialogTitle: "biaot",
+      dialogTitle: "标题",
       visible: false,
       iptTxtValue: "",
       str: `

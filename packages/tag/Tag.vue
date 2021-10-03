@@ -3,8 +3,8 @@
  * @Version: 2.0
  * @Autor: Seven
  * @Date: 2021-09-15 02:24:15
- * @LastEditors: Seven
- * @LastEditTime: 2021-09-15 02:53:22
+ * @LastEditors: xx
+ * @LastEditTime: 2021-10-03 16:02:31
 -->
 <template>
   <span :class="`x-tag x-tag-${type}`" @click="handleTagClick">
@@ -35,16 +35,22 @@ export default {
   padding: 0 10px;
   height: 32px;
 
-  color: #fff;
   line-height: 30px;
   border-radius: 3px;
+  color: #fff;
+
   white-space: nowrap;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 .x-tag-default {
   border: 1px solid #dcdfe6;
   background-color: #ffffff;
   color: #333;
+  &:hover {
+    background-color: #c6e2ff;
+    color: #409eff;
+  }
 }
 .x-tag-primary {
   background-color: #409eff;

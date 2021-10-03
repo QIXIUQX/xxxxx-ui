@@ -4,7 +4,7 @@
  * @Autor: xx
  * @Date: 2021-09-25 00:02:17
  * @LastEditors: xx
- * @LastEditTime: 2021-10-03 01:27:04
+ * @LastEditTime: 2021-10-03 16:04:16
 -->
 <template>
   <div class="slide">
@@ -34,10 +34,10 @@ export default {
           url:
             "https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/32609b4ad73d49e4ae364f5283f5e8f6.png!sswm",
         },
-        // {
-        //   url:
-        //     "https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/da4bd769ce574a6fba27f6902a63c044.png!sswm",
-        // },
+        {
+          url:
+            "https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/da4bd769ce574a6fba27f6902a63c044.png!sswm",
+        },
         // {
         //   url:
         //     "https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/86bc6a05914245bfbf4e8ce24574f687.png!sswm",

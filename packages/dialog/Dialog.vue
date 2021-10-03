@@ -1,38 +1,40 @@
 <template>
-  <transition @before-enter="beforeEnter" @enter="enter" @leave="leave">
+  <transition name="dialog-fade">
     <div
       class="x-dialog-mark"
-      v-if="visible"
+      v-show="visible"
       @click.self="handleClose"
       :css="false"
     >
-      <div
-        class="x-dialog"
-        :style="{
-          width: width,
-          transform: ` translateY(top + 'px')`,
-        }"
-      >
-        <div class="x-dialog-header">
-          <slot name="dialogHeader">
-            <span class="x-dialog-title">
-              {{ title }}
-            </span>
-          </slot>
+      <transition name="dialog-body-fade">
+        <div
+          class="x-dialog"
+          :style="{
+            width: width,
+            top: top + '%',
+          }"
+          v-show="visible"
+        >
+          <div class="x-dialog-header">
+            <slot name="dialogHeader">
+              <span class="x-dialog-title">
+                {{ title }}
+              </span>
+            </slot>
 
-          <div class="x-dialog-header-btn" @click="handleClose">
-            <i class="x-dialog-header-close iconfont icon-close"></i>
+            <div class="x-dialog-header-btn" @click="handleClose">
+              <i class="x-dialog-header-close iconfont icon-close"></i>
+            </div>
           </div>
-        </div>
-        <div class="x-dialog-body">
-          <slot name="dialogBody">
-            <span>这是信息</span>
-          </slot>
-        </div>
-        <div class="x-dialog-footer" v-if="$slots.dialogFooter">
-          <slot name="dialogFooter"></slot>
-        </div>
-      </div>
+          <div class="x-dialog-body">
+            <slot name="dialogBody">
+              <span>这是信息</span>
+            </slot>
+          </div>
+          <div class="x-dialog-footer" v-if="$slots.dialogFooter">
+            <slot name="dialogFooter"></slot>
+          </div></div
+      ></transition>
     </div>
   </transition>
 </template>
@@ -51,7 +53,7 @@ export default {
     },
     top: {
       type: Number,
-      default: 200,
+      default: 30,
     },
     visible: {
       type: Boolean,
@@ -62,24 +64,6 @@ export default {
     handleClose() {
       this.$emit("update:visible", false);
       this.$emit("close");
-    },
-
-    beforeEnter(el) {
-      el.style.opacity = 0;
-      el.children[0].transform = `translateY(-40px)`;
-    },
-    enter(el) {
-      el.offsetTop;
-      el.style.opacity = 1;
-      el.children[0].transform = `translateY(0px)`;
-
-      el.style.transition = `all ease .3s`;
-    },
-    leave(el) {
-      el.style.opacity = 0;
-      el.children[0].transform = `translateY(-40px)`;
-
-      el.style.transition = `all ease .3s`;
     },
   },
   watch: {
@@ -139,6 +123,43 @@ export default {
         margin: 0 10px 0 0;
       }
     }
+  }
+}
+.dialog-fade-enter-active {
+  animation: fade 0.2s ease-in;
+}
+.dialog-fade-leave-active {
+  animation: fade 0.2s ease-in reverse;
+}
+
+@keyframes fade {
+  0% {
+    // transform: translateY(-40px);
+    opacity: 0;
+  }
+
+  100% {
+    // transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.dialog-body-fade-enter-active {
+  animation: DialogBodyFade 0.2s ease-in;
+}
+.dialog-body-fade-leave-active {
+  animation: DialogBodyFade 0.2s ease-in reverse;
+}
+
+@keyframes DialogBodyFade {
+  0% {
+    transform: translate(-50%, -40px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-50%, 0px);
+    opacity: 1;
   }
 }
 </style>
