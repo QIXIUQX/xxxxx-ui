@@ -8,6 +8,7 @@
  */
 import Vue from "vue";
 import VueRouter from "vue-router";
+
 const Button = () => import("../views/button/Button.vue");
 const Home = () => import("../views/home/Home.vue");
 const Input = () => import("../views/input/Input.vue");
@@ -19,65 +20,70 @@ const StoreyTitle = () => import("../views/storey-title/StoreyTitle.vue");
 const Divider = () => import("../views/divider/Divider.vue");
 const dialog = () => import("../views/dialog/dialog.vue");
 const Slide = () => import("../views/slide/Slide.vue");
+const testasfa = () => import("../views/area-header/AreaHeader");
 
 Vue.use(VueRouter);
 
 const routes = [
-  {
-    path: "/",
-    redirect: "/home",
-  },
-  {
-    path: "/home",
-    component: Home,
-  },
-  {
-    path: "/button",
-    component: Button,
-  },
-  {
-    path: "/input",
-    component: Input,
-  },
-  {
-    path: "/collapse",
-    component: Collapse,
-  },
-  {
-    path: "/notify",
-    component: Notify,
-  },
-  ,
-  {
-    path: "/switch",
-    component: Switch,
-  },
-  {
-    path: "/tag",
-    component: Tag,
-  },
-  {
-    path: "/storeytitle",
-    component: StoreyTitle,
-  },
-  {
-    path: "/divider",
-    component: Divider,
-  },
-  {
-    path: "/dialog",
-    component: dialog,
-  },
-  {
-    path: "/slide",
-    component: Slide,
-  },
+	{
+		path: "/",
+		redirect: "/home",
+	},
+	{
+		path: "/home",
+		component: Home,
+	},
+	{
+		path: "/button",
+		component: Button,
+	},
+	{
+		path: "/input",
+		component: Input,
+	},
+	{
+		path: "/collapse",
+		component: Collapse,
+	},
+	{
+		path: "/notify",
+		component: Notify,
+	},
+	,
+	{
+		path: "/switch",
+		component: Switch,
+	},
+	{
+		path: "/tag",
+		component: Tag,
+	},
+	{
+		path: "/storeytitle",
+		component: StoreyTitle,
+	},
+	{
+		path: "/divider",
+		component: Divider,
+	},
+	{
+		path: "/dialog",
+		component: dialog,
+	},
+	{
+		path: "/slide",
+		component: Slide,
+	},
+	{
+		path: "/xareaheader",
+		component: testasfa,
+	}
 ];
 
 const router = new VueRouter({
-  mode: "history",
-  base: process.env.BASE_URL,
-  routes,
+	mode: "history",
+	base: process.env.BASE_URL,
+	routes,
 });
 
 export default router;

@@ -1,11 +1,4 @@
-<!--
- * @Description: 
- * @Version: 2.0
- * @Autor: Seven
- * @Date: 2021-09-11 18:12:56
- * @LastEditors: Seven
- * @LastEditTime: 2021-09-11 18:15:52
--->
+
 <template>
   <code class="code-area">
     <slot></slot>

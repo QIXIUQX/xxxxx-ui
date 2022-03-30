@@ -128,4 +128,50 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.x-input {
+	width: 100%;
+	height: max-content;
+	border-radius: 5px;
+	
+	.x-input-inner,
+	.x-textarea {
+		padding: 0 30px 0 15px;
+		width: 100%;
+		height: 40px;
+		outline: none;
+		border: none;
+		border: 1px solid #c0c4cc;
+		transition: border .3s ease;
+		
+		&:focus {
+			border: 1px solid #409eff;
+		}
+	}
+	
+	
+	
+	
+	input[type='password']::-ms-reveal {
+		display: none
+	}
+	
+	.is-disabled {
+		cursor: no-drop;
+		background-color: #ddd;
+	}
+}
+
+.x-ui--suffix {
+	position: relative;
+	
+	.x-ui-suffix {
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+		color: #a1a6bb;
+		cursor: pointer;
+	}
+}
+</style>

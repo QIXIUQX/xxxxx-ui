@@ -20,6 +20,7 @@ import XDivider from "./divider/Divider.vue";
 import XDialog from "./dialog/Dialog.vue";
 import XSlide from "./slide/Slide.vue";
 import XSlideItem from "./slide/SlideItem.vue";
+import XAreaHeader from "./area-header/AreaHeader";
 
 const components = [
   XButton,
@@ -33,6 +34,8 @@ const components = [
   XDialog,
   XSlide,
   XSlideItem,
+  XAreaHeader,
+
 ];
 
 const install = function(Vue) {

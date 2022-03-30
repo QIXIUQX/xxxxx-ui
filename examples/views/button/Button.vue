@@ -1,11 +1,3 @@
-<!--
- * @Description: 
- * @Version: 2.0
- * @Autor: Seven
- * @Date: 2021-09-11 16:27:25
- * @LastEditors: Seven
- * @LastEditTime: 2021-09-15 02:13:01
--->
 <template>
   <div class="button">
     <XButton type="default" style="margin-left:10px">默认 按钮</XButton>
