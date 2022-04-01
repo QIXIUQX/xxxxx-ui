@@ -1,11 +1,3 @@
-<!--
- * @Description: 
- * @Version: 2.0
- * @Autor: Seven
- * @Date: 2021-09-15 00:35:55
- * @LastEditors: Seven
- * @LastEditTime: 2021-09-15 13:47:17
--->
 <template>
   <label class="x-switch" @click="handleSwitchClick">
     <span class="x-switch-core" :class="{ 'is-check': value }" ref="core">

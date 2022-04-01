@@ -1,11 +1,3 @@
-<!--
- * @Description: 
- * @Version: 2.0
- * @Autor: Seven
- * @Date: 2021-09-15 02:24:15
- * @LastEditors: xx
- * @LastEditTime: 2021-10-03 16:02:31
--->
 <template>
   <span :class="`x-tag x-tag-${type}`" @click="handleTagClick">
     <slot></slot>

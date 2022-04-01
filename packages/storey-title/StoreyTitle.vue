@@ -1,11 +1,3 @@
-<!--
- * @Description: 
- * @Version: 2.0
- * @Autor: Seven
- * @Date: 2021-09-07 17:07:11
- * @LastEditors: Seven
- * @LastEditTime: 2021-09-15 13:27:52
--->
 <template>
   <header class="storey-title">
     <slot></slot>

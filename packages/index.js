@@ -1,11 +1,3 @@
-/*
- * @Description:
- * @Version: 2.0
- * @Autor: Seven
- * @Date: 2021-09-09 15:04:53
- * @LastEditors: xx
- * @LastEditTime: 2021-09-25 00:51:56
- */
 import "./theme/index.scss";
 
 import notify from "./notify/index";
