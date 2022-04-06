@@ -69,7 +69,7 @@ export default {
 		},
 	},
 	watch: {
-		visible(newValue, oldValue) {
+		visible(newValue) {
 			if (newValue) {
 				this.$emit("open");
 			}
@@ -85,7 +85,7 @@ export default {
 	left: 0;
 	top: 0;
 	right: 0;
-	bottom: 0px;
+	bottom: 0;
 	background-color: rgba(0, 0, 0, 0.3);
 	
 	.x-dialog {
