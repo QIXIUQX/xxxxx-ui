@@ -1,11 +1,3 @@
-<!--
- * @Description: 
- * @Version: 2.0
- * @Autor: xx
- * @Date: 2021-10-01 17:52:06
- * @LastEditors: xx
- * @LastEditTime: 2021-10-01 18:42:11
--->
 <template>
   <div
     class="x-slider-director-left x-slider-director"

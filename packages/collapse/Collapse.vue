@@ -1,47 +1,39 @@
-<!--
- * @Description: 
- * @Version: 2.0
- * @Autor: Seven
- * @Date: 2021-09-08 12:48:40
- * @LastEditors: Seven
- * @LastEditTime: 2021-09-11 15:39:18
--->
 <template>
-  <div class="x-ui-collspace">
-    <slot></slot>
-  </div>
+	<div class="x-ui-collapse">
+		<slot></slot>
+	</div>
 </template>
 
 <script>
 export default {
-  name: "XCollapse",
-  props: {
-    value: {
-      type: Array,
-      default: [],
-    },
-  },
-  provide() {
-    return {
-      collapse: this,
-    };
-  },
-  created() {
-    this.$on("itemChange", (item) => {
-      let idx = this.value.indexOf(item);
-      if (idx > -1) {
-        this.value.splice(idx, 1);
-      } else {
-        this.value.push(item);
-      }
-    });
-  },
+	name: "XCollapse",
+	props: {
+		value: {
+			type: Array,
+			default: [],
+		},
+	},
+	provide() {
+		return {
+			collapse: this,
+		};
+	},
+	created() {
+		this.$on("itemChange", (item) => {
+			let idx = this.value.indexOf(item);
+			if (idx > -1) {
+				this.value.splice(idx, 1);
+			} else {
+				this.value.push(item);
+			}
+		});
+	},
 };
 </script>
 
 <style lang="scss" scoped>
-.x-ui-collspace {
-  border-top: 1px solid #ebeef5;
-  border-bottom: 1px solid #ebeef5;
+.x-ui-collapse {
+	border-top: 1px solid #ebeef5;
+	border-bottom: 1px solid #ebeef5;
 }
 </style>
