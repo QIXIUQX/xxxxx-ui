@@ -1,11 +1,3 @@
-<!--
- * @Description: 
- * @Version: 2.0
- * @Autor: Seven
- * @Date: 2021-09-08 12:48:40
- * @LastEditors: xx
- * @LastEditTime: 2021-09-21 19:16:17
--->
 <template>
 	<div class="x-ui-collapse-item">
 		<div class="x-ui-collapse-item-title" @click="handleCollapseItemClick">
@@ -53,7 +45,7 @@ export default {
 			this.collapse.$emit("itemChange", this.name);
 		},
 		beforeEnter(el) {
-			el.style.height = 0;
+			el.style.height = "0";
 		},
 		enter(el) {
 			el.offsetTop;
