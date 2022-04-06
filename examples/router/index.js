@@ -21,6 +21,7 @@ const Divider = () => import("../views/divider/Divider.vue");
 const dialog = () => import("../views/dialog/dialog.vue");
 const Slide = () => import("../views/slide/Slide.vue");
 const testasfa = () => import("../views/area-header/AreaHeader");
+const  Tabs    = () => import("../views/tabs/Tabs");
 
 Vue.use(VueRouter);
 
@@ -77,6 +78,10 @@ const routes = [
 	{
 		path: "/xareaheader",
 		component: testasfa,
+	},
+	{
+		path: "/xtabs",
+		component: Tabs,
 	}
 ];
 

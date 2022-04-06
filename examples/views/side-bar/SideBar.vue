@@ -1,11 +1,3 @@
-<!--
- * @Description: 
- * @Version: 2.0
- * @Autor: Seven
- * @Date: 2021-09-11 16:15:48
- * @LastEditors: xx
- * @LastEditTime: 2021-09-25 00:02:42
--->
 <template>
 	<div class="sidebar">
 		<XStoreyTitle>XXXXX-UI</XStoreyTitle>
@@ -72,6 +64,10 @@ export default {
 				{
 					path: "/xareaheader",
 					title: "页面列表头部",
+				},
+				{
+					path: "/xtabs",
+					title: "tabs列表",
 				}
 			],
 		};

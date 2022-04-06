@@ -13,33 +13,37 @@ import XDialog from "./dialog/Dialog.vue";
 import XSlide from "./slide/Slide.vue";
 import XSlideItem from "./slide/SlideItem.vue";
 import XAreaHeader from "./area-header/AreaHeader";
+import XTabs from "./tabs/Tabs";
+import XTabPane from "./tabs/TabPane";
+
 
 const components = [
-  XButton,
-  XInput,
-  XCollapse,
-  XCollapseItem,
-  XStoreyTitle,
-  XSwitch,
-  XTag,
-  XDivider,
-  XDialog,
-  XSlide,
-  XSlideItem,
-  XAreaHeader,
-
+	XButton,
+	XInput,
+	XCollapse,
+	XCollapseItem,
+	XStoreyTitle,
+	XSwitch,
+	XTag,
+	XDivider,
+	XDialog,
+	XSlide,
+	XSlideItem,
+	XAreaHeader,
+	XTabs,
+	XTabPane,
 ];
 
-const install = function(Vue) {
-  Vue.prototype.$notify = notify;
+const install = function (Vue) {
+	Vue.prototype.$notify = notify;
 
-  components.forEach((component) => {
-    Vue.component(component.name, component);
-  });
+	components.forEach((component) => {
+		Vue.component(component.name, component);
+	});
 };
 if (typeof window !== "undefined" && window.Vue) {
-  install(window.Vue);
+	install(window.Vue);
 }
 export default {
-  install,
+	install,
 };
