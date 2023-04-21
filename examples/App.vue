@@ -1,5 +1,5 @@
 <!--
- * @Description: 
+ * @Description:
  * @Version: 2.0
  * @Autor: Seven
  * @Date: 2021-09-09 14:50:36
@@ -10,6 +10,8 @@
 	<div id="app">
 		<SideBar></SideBar>
 		<div class="wrap">
+<!--			<input type="text" v-focus>-->
+<!--			<div v-loading="true" style="width: 500px;height: 500px"></div>-->
 			<router-view></router-view>
 		</div>
 	</div>
@@ -62,10 +64,10 @@ export default {
 #app {
 	display: flex;
 	width: 100vw;
-	
+
 	height: 100vh;
 	display: flex;
-	
+
 	.wrap {
 		flex:8;
 		padding: 50px;

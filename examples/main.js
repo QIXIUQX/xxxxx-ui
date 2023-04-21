@@ -15,10 +15,16 @@ import XUI from "../packages/index";
 
 import "./assets/scss/index.scss";
 
+import loading from "../packages/directives/Loading/loading";
+import focus from "../packages/directives/Focus/focus"
+
 // import XUI from "xxxxx-ui"; import
 // "xxxxx-ui/dist/xxxxx-ui.css"; Vue.use(XUI);
 Vue.config.productionTip = false;
 Vue.use(XUI);
+
+Vue.directive('loading', loading)
+Vue.directive('focus', focus)
 
 new Vue({
   router,
