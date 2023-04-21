@@ -12,11 +12,15 @@
 		<div class="wrap">
 <!--			<input type="text" v-focus>-->
 <!--			<div v-loading="true" style="width: 500px;height: 500px"></div>-->
+<!--			<Empty description="空空"></Empty>-->
+
 			<router-view></router-view>
 		</div>
 	</div>
 </template>
 <script>
+import Empty from "../packages/empty/Empty.vue";
+
 const SideBar = () => import("./views/side-bar/SideBar.vue");
 
 export default {
@@ -24,6 +28,7 @@ export default {
 		return {};
 	},
 	components: {
+		Empty,
 		SideBar,
 	},
 	methods: {
